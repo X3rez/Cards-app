@@ -19,8 +19,8 @@ const MyCards = () => {
         setShow(!show)
     }
 
-    const lStorage = JSON.parse(localStorage.getItem('cards'))
-
+    let lStorage = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('cards')):null
+    
     return (
         <>
             <Head>
