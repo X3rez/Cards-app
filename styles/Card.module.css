@@ -3,7 +3,10 @@
   width: 10em;
   height: 15em;
   cursor: pointer;
+  user-select: none;
+  text-align: center;
   perspective: 1000px;
+
 }
 
 .inner{
@@ -26,6 +29,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  word-break: break-all;
 }
 
 .front{
@@ -61,4 +65,21 @@
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
+}
+
+.delete{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  transition: color .5s ease;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+}
+
+.delete:hover{
+  color: #ff0000;
 }

@@ -10,6 +10,9 @@ import Modal from '../components/Modal'
 
 import styles from '../styles/MyCards.module.css'
 
+import {BiMessageSquareAdd} from 'react-icons/bi'
+
+import {IconContext} from 'react-icons'
 
 
 const MyCards = () => {
@@ -33,7 +36,9 @@ const MyCards = () => {
             
             <main className={styles.main}>
 
-                <button className={styles.button} onClick={handleAddCard}>Add Card</button>
+            <IconContext.Provider value={{ className:styles.button}}>
+                    <BiMessageSquareAdd onClick={handleAddCard} />
+            </IconContext.Provider>
 
                 <section className={styles.cards__container}>
 
