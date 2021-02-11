@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(to right, #757575, #000000);
-    margin-top: 3em;
+    background: linear-gradient(to right, #000000, #e7e7e7);
+    margin-top: 2.5em;
     text-align: center;
     color: #fff;
 }
@@ -15,7 +15,6 @@
     text-transform: uppercase;
     user-select: none;
 }
-
 
 .main__button{
     background-color: #000;

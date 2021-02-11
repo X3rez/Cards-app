@@ -4,13 +4,13 @@ import Link from "next/link";
 
 import { Pivot as Hamburger } from 'hamburger-react'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
 const Navbar = () => {
-    
     const [isOpen,setOpen] = useState<boolean>(false)
+
 
     return (
         <nav>
@@ -18,7 +18,6 @@ const Navbar = () => {
                 <ul className={`${isOpen ? styles.nav__hamburger__open : styles.nav__hamburger__open + " " + styles.nav__hamburger__close}`}>
                     <li className={styles.nav__hamburger__li}><Link href="/">HOME</Link></li>
                     <li className={styles.nav__hamburger__li}><Link href="/MyCards">MY CARDS</Link></li>
-                    <li className={styles.nav__hamburger__li}><Link href="/Premium">PREMIUM</Link></li>
                     <li className={styles.nav__hamburger__li}><Link href="/WhoAreWe">WHO ARE WE</Link></li>
                 </ul>    
                 
@@ -26,11 +25,9 @@ const Navbar = () => {
                     <Hamburger toggled={isOpen} toggle={setOpen} color="#fff" />
                 </div>
             </section>
-            
-            <ul className={styles.nav__container}>
+            <ul className={styles.nav__container} >
                 <li className={styles.nav__li}><Link href="/">HOME</Link></li>
                 <li className={styles.nav__li}><Link href="/MyCards">MY CARDS</Link></li>
-                <li className={styles.nav__li}><Link href="/Premium">PREMIUM</Link></li>
                 <li className={styles.nav__li}><Link href="/WhoAreWe">WHO ARE WE</Link></li>
             </ul> 
         </nav>
