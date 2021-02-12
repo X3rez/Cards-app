@@ -44,7 +44,7 @@ const MyCards = () => {
 
                     {show && <Modal setShow={setShow}/>}
 
-                    {lStorage && lStorage.map(el => <Card front={el.frontValue} back={el.backValue} /> )}                    
+                    {lStorage && lStorage.map(el => <Card front={el.frontValue} back={el.backValue} image={null} /> )}                    
                 </section>
             </main>
         </>

@@ -30,7 +30,7 @@ const Modal = ({setShow}) => {
         <section className={styles.modal__container} onClick={handleCloseModal}>
             
             <form className={styles.modal} onSubmit={handleSave}>
-                <input className={styles.modal__input} type="text" placeholder="Front Word"/>
+                <input className={styles.modal__input} type="text" placeholder="Front Word" maxLength={32}/>
                 <input className={styles.modal__input} type="text" placeholder="Back Word"/>
                 <input type="file" accept="image/*"/>
                 <input className={styles.modal__button} type="submit" value="Save"/>

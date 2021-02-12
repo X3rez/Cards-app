@@ -6,8 +6,7 @@ import {IconContext} from 'react-icons'
 
 
 
-
-const Card = ({front,back}) => {
+const Card = ({front,back,image}) => {
   const handleDelete = () =>{
     console.log(front + ":" + back + " " + "Was deleted")
   }
@@ -19,6 +18,7 @@ const Card = ({front,back}) => {
             <div className={styles.inner}>
               <section className={styles.front}>
                   <h4>{front}</h4>
+                  <img className={image || styles.front__image} src='/noimage.png' alt="Card-Image"/>
               </section>
 
               <section className={styles.back}>
