@@ -4,11 +4,20 @@ import {MdDelete} from 'react-icons/md'
 
 import {IconContext} from 'react-icons'
 
+import { useRouter } from "next/router";
 
 
-const Card = ({front,back,image}) => {
-  const handleDelete = () =>{
+
+
+const Card = ({front,back,image,id}) => {
+  const router = useRouter()
+  const handleDelete = async() =>{
     console.log(front + ":" + back + " " + "Was deleted")
+    const deleted = await fetch(`https://cards-app-backend.herokuapp.com/deletecard/${id}`)
+    const res = await deleted.json()
+    console.log(res)
+    router.reload()
+
   }
 
 
@@ -18,7 +27,7 @@ const Card = ({front,back,image}) => {
             <div className={styles.inner}>
               <section className={styles.front}>
                   <h4>{front}</h4>
-                  <img className={image || styles.front__image} src='/noimage.png' alt="Card-Image"/>
+                  <img className={styles.front__image} src={image || '/noimage.png'} alt="Card-Image"/>
               </section>
 
               <section className={styles.back}>

@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(to right, #000000, #e7e7e7);
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+    background: linear-gradient(to right, #99f2c8, #1f4037); 
     margin-top: 2.5em;
     text-align: center;
     color: #fff;
@@ -20,7 +21,7 @@
     background-color: #000;
     color: #fff;
     border: none;
-    cursor: pointer;
+    cursor: pointer;    
     font-weight: 800;
     padding: 1em;
     border-radius: 5px;
